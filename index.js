@@ -2,12 +2,14 @@
 //requires
 const express = require('express');
 const dotenv = require('dotenv');
+const sequelize = require('./src/models');
 
 dotenv.config();
 const app = express();
 
 //middlewares
 app.use(express.json());
+
 
 
 

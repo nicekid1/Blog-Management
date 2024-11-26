@@ -1,4 +1,4 @@
-const { DataTypes, BelongsTo } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("./index");
 const User = require("./user");
 
@@ -19,6 +19,6 @@ const Blog = sequelize.define(
   }
 );
 
-Blog.belongsTo('User',{foreignKey: 'userId', as: 'author'})
-User.hasMany('Blog', {foreignKey: 'userId', as: 'blogs'})
+Blog.belongsTo(User,{foreignKey: 'userId', as: 'author'})
+User.hasMany(Blog , {foreignKey: 'userId', as: 'blogs'})
 module.exports = Blog;

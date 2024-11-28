@@ -31,7 +31,7 @@ app.use(express.json());
 //routes
 app.use("/api/auth", authRoutes);
 app.use("/api/blogs", blogRoutes);
-app.use("/api/blogs/:id/comments", commentRoutes);
+app.use("/api/blogs/comments", commentRoutes);
 
 //port setting
 const PORT = process.env.PORT || 3001;

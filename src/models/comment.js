@@ -3,7 +3,7 @@ const sequelize = require('./index');
 const User = require('./user');
 const Blog = require('./blog');
 
-const Comment = sequelize.define('Comment', {
+const Comment = sequelize.define('comment', {
     content: {
         type: DataTypes.TEXT,
         allowNull: false,
